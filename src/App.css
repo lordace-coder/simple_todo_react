@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+.btn {
+  @apply text-white p-6 py-2 rounded-lg cursor-pointer;
+  @apply hover:scale-105 transition-all active:opacity-70;
+}
+
+/* TailwindCSS Animations */
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 1s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out;
+}
